@@ -28,7 +28,7 @@
 p1_nome = "Açaí Tradicional"
 p1_estoque = 50
 p1_preco = 16.00
-p1_validade = "12/12/2026 "
+p1_validade = "12/12/2026"
 p1_descricao = "Açaí tradicional, um clássico que nunca falha."
 
 
@@ -82,6 +82,9 @@ dias_da_semana = [
 total = 0
 nome_venda = ""
 qtd_venda = 0
+
+# Inicializando a função Contato
+historico_contato = []
 
 # Inicializando a função de Promoções
 
@@ -475,7 +478,7 @@ while True:
         "mensagem": mensagem
     }
 
-    historico_contatos.append(contato)
+    historico_contato.append(contato)
 
     print('\nObrigado pelo contato!')
     print('Sua mensagem foi enviada com sucesso.')
@@ -483,10 +486,10 @@ while True:
 
     print('\n--- Histórico de Contatos ---')
 
-    if historico_contatos == []:
+    if historico_contato == []:
         print('Nenhum contato registrado.')
     else:
-        for contato in historico_contatos:
+        for contato in historico_contato:
             print(f"Nome: {contato['nome']}")
             print(f"E-mail: {contato['email']}")
             print(f"Telefone: {contato['telefone']}")
